@@ -1,6 +1,12 @@
+$primary-color: #9356DC;
+$Secondary-color: #FF79DA;
+$Tertiary-color: #99E2D0;
 html {
     box-sizing: border-box;
     font-family: Roboto;
+}
+h1 {
+    font-family: Shirkhand;
 }
 .header {
     display: flex;

@@ -3,6 +3,10 @@ html {
   font-family: Roboto;
 }
 
+h1 {
+  font-family: Shirkhand;
+}
+
 .header {
   display: flex;
   width: 100%;
