@@ -67,9 +67,7 @@ h1 {
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: flex-start;
   flex-shrink: 0;
-  padding-left: 1.5rem;
 }
 
 .header-logo {
@@ -77,16 +75,21 @@ h1 {
 }
 
 .fa-1, .fa-2, .fa-3 {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #9356DC;
   color: white;
   border-radius: 25px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .how-it-works {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 0px;
 }
 
 .fa-store {
@@ -96,12 +99,16 @@ h1 {
 .works-items {
   display: flex;
   flex-direction: row;
-  width: 322px;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
   height: 72px;
   flex-shrink: 0;
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin: 20px 0px;
+  padding-left: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
