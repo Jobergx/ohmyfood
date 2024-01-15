@@ -18,20 +18,20 @@
 <body class="body">
     <header>
         <div class="header">
-            <img class="header-logo" src="./images/images/logo/ohmyfood@2x.svg" alt="ohmyfood logo">
+            <img class="header__logo" src="./images/images/logo/ohmyfood@2x.svg" alt="ohmyfood logo">
         </div>
-        <div class="header-location">
+        <div class="header__location">
             <i class="fa-solid fa-location-dot fa-lg"></i>
             <p>Islington, London</p>
         </div>
     </header>
     <main class="main">
-        <section class="main-book">
+        <section class="main__book">
             <h2>Book the meal you want</h2>
             <p>Discover our carefully selected high-end restaurants</p>
-            <button class="explore-button">Explore our restaurants</button>
+           <a href="#restaurants"><button class="main__explore-button">Explore our restaurants</button></a>
         </section>
-        <section class="main-how-it-works">
+        <section class="main__how-it-works">
             <h2>How it works</h2>
             <div class="how-it-works">
                 <i class="fa-solid fa-1"></i>
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="restaurants">
             <h2>Restaurants</h2>
             <article class="card">
                 <a href="./restaurants/kitchen-west.html">
@@ -114,7 +114,7 @@
         </section>
     </main>
     <footer class="footer">
-        <a href="#"><h1 class="footer__logo"><em>ohmyfood</em></h1>
+        <a href="#"><img class="footer__logo" src="./images/images/logo/ohmyfood@2x.svg"></a>
         <a href="#"><i class="fa-solid fa-utensils"></i> Suggest a restaurant</a>
         <a href="#"><i class="fa-solid fa-handshake-angle"></i> Become a partner</a>
         <a href="#">Legal notice</a>
