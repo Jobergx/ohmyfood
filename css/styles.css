@@ -214,6 +214,7 @@ h2 {
 }
 .restaurant__name {
   font-weight: 200;
+  margin-left: 20px;
 }
 .restaurant__heart {
   display: flex;

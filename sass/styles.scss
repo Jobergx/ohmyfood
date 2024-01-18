@@ -247,9 +247,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-inline: 20px;
+    
 
     &__name {
         font-weight: 200;
+        margin-left: 20px;
     }
 
     &__heart {
