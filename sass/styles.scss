@@ -7,11 +7,13 @@ $Tertiary-color: #99E2D0;
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background: var(--Background, #F6F6F6);
 }
 
 .body {
     display: grid;
     grid-template-columns: 1fr;
+    
 }
 
 h2 {}
@@ -55,15 +57,12 @@ h2 {}
 }
 
 
-#restaurants {
-    
-}
 
 
 .main {
-    margin: 20px;
-    max-width: 1080px;
-
+    margin: 20px auto;
+   width: 100%;
+   
    
 
 
@@ -85,6 +84,10 @@ h2 {}
         width: 100%;
         justify-content: center;
         flex-shrink: 1;
+        background: white;
+        padding-inline: 250px;
+        padding-top: 40px;
+        
 
         @media only screen and (min-width: 992px) {
             display: grid;
@@ -147,6 +150,22 @@ h2 {}
     position: absolute;
     left: -1%;
     margin-left: 25px;
+
+    @media only screen and (min-width: 992px) {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #9356DC;
+    color: white;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: smaller;
+    text-align: center;
+    position: relative;
+    left: -65px;
+    }
 }
 
 .how-it-works {
