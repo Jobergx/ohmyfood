@@ -13,7 +13,7 @@ html {
 .body {
     display: grid;
     grid-template-columns: 1fr;
-    
+
 }
 
 h2 {}
@@ -61,9 +61,9 @@ h2 {}
 
 .main {
     margin: 20px auto;
-   width: 100%;
-   
-   
+    width: 100%;
+
+
 
 
 
@@ -76,6 +76,19 @@ h2 {}
         text-align: center;
         flex-shrink: 0;
         flex-wrap: wrap;
+        font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+
+        @media only screen and (min-width: 992px) {
+            h2:first-child {
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+
     }
 
     &__how-it-works {
@@ -83,11 +96,11 @@ h2 {}
         flex-direction: column;
         width: 100%;
         justify-content: center;
-        flex-shrink: 1;
+        flex-shrink: inherit;
         background: white;
-        
+
         padding-top: 40px;
-        
+
 
         @media only screen and (min-width: 992px) {
             display: grid;
@@ -136,11 +149,12 @@ h2 {}
     @media only screen and (min-width: 992px) {
         padding-left: 250px;
     }
-    
+
 }
 
 .how-it {
     margin: 20px;
+
     @media only screen and (min-width: 992px) {
         padding: 30px 250px;
         background: white;
@@ -173,18 +187,18 @@ h2 {}
 
     @media only screen and (min-width: 992px) {
         display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    background-color: #9356DC;
-    color: white;
-    border-radius: 50%;
-    font-weight: 400;
-    font-size: smaller;
-    text-align: center;
-    position: relative;
-    left: -85px;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 50%;
+        font-weight: 400;
+        font-size: smaller;
+        text-align: center;
+        position: relative;
+        left: -40px;
     }
 }
 
@@ -194,15 +208,17 @@ h2 {}
     align-items: center;
     gap: 20px;
     height: 72px;
-    flex-shrink: 0;
+    flex-shrink: inherit;
     border-radius: 20px;
     background: var(--Background, #F6F6F6);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     margin: 20px 15px;
     padding-left: 50px;
+    margin-left: 30px;
 
     @media only screen and (min-width: 992px) {
-        
+        padding-left: 0px;
+        gap: 0px;
     }
 
 
@@ -218,16 +234,23 @@ h2 {}
     align-items: center;
     gap: 20px;
 
+    @media only screen and (min-width: 992px) {
+        left: -40px;
+        flex-shrink: inherit;
+    }
+
 }
-.restaurant-main{
+
+.restaurant-main {
     @media only screen and (min-width: 992px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 50px 100px;
-        
+
     }
 }
+
 .card {
     position: relative;
     width: 100%;
@@ -236,7 +259,7 @@ h2 {}
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
 
-   
+
 
     a {
         text-decoration: none;
@@ -256,7 +279,7 @@ h2 {}
         align-items: center;
         padding: 16px;
 
-      
+
         h3,
         p {
             margin: 0;
@@ -283,6 +306,7 @@ h2 {}
         padding-top: 22px;
         height: 27px;
     }
+
     @media only screen and (min-width: 992px) {
         display: flex;
         flex-direction: row;
@@ -291,7 +315,7 @@ h2 {}
         justify-content: flex-end;
         align-items: flex-end;
     }
-    
+
 }
 
 .rest {

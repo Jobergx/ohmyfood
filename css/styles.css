@@ -55,13 +55,24 @@ html {
   text-align: center;
   flex-shrink: 0;
   flex-wrap: wrap;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+@media only screen and (min-width: 992px) {
+  .main__book h2:first-child {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+  }
 }
 .main__how-it-works {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  flex-shrink: 1;
+  flex-shrink: inherit;
   background: white;
   padding-top: 40px;
 }
@@ -161,7 +172,7 @@ html {
     font-size: smaller;
     text-align: center;
     position: relative;
-    left: -85px;
+    left: -40px;
   }
 }
 
@@ -171,13 +182,21 @@ html {
   align-items: center;
   gap: 20px;
   height: 72px;
-  flex-shrink: 0;
+  flex-shrink: inherit;
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin: 20px 15px;
   padding-left: 50px;
+  margin-left: 30px;
 }
+@media only screen and (min-width: 992px) {
+  .how-it-works {
+    padding-left: 0px;
+    gap: 0px;
+  }
+}
+
 .fa-store {
   color: #9356DC;
 }
@@ -187,6 +206,12 @@ html {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .works-items {
+    left: -40px;
+    flex-shrink: inherit;
+  }
 }
 
 @media only screen and (min-width: 992px) {
