@@ -1,7 +1,8 @@
 $primary-color: #9356DC;
 $Secondary-color: #FF79DA;
 $Tertiary-color: #99E2D0;
-@mixin heart-purple { 
+
+@mixin heart-purple {
     background: linear-gradient($Secondary-color, $primary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -68,9 +69,9 @@ html {
         height: 275px;
         object-fit: cover;
         z-index: -1;
-        
-        
-  
+
+
+
     }
 
     &__restaurant {
@@ -90,9 +91,9 @@ html {
 
 
 .main {
-    
+
     width: 100%;
-    
+
 
 
 
@@ -100,16 +101,16 @@ html {
     &__book {
         display: flex;
         flex-direction: column;
-        width: 100%;
         justify-content: center;
         align-items: center;
         text-align: center;
         flex-shrink: 0;
         flex-wrap: wrap;
         font-size: 18px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        padding-inline: 12px;
 
         @media only screen and (min-width: 992px) {
             h2:first-child {
@@ -129,7 +130,7 @@ line-height: normal;
         flex-shrink: inherit;
         background: white;
 
-        padding-top: 40px;
+
 
 
         @media only screen and (min-width: 992px) {
@@ -161,6 +162,10 @@ line-height: normal;
         filter: brightness(110%);
     }
 
+    &__button {
+        padding-bottom: 57px;
+    }
+
     &__body {
         display: grid;
         grid-template-columns: 1fr;
@@ -171,44 +176,47 @@ line-height: normal;
         top: -50px;
         max-width: 1055px;
         width: 100%;
-        
+
     }
 }
 
 @keyframes heart-backwards {
     0% {
-       opacity: 1;
-       @include heart-purple;
+        opacity: 1;
+        @include heart-purple;
     }
+
     100% {
-      opacity: 0;
-      @include heart-purple;
+        opacity: 0;
+        @include heart-purple;
     }
 }
 
 .heart {
     font-size: 24px;
     font-weight: 300;
-    animation: heart-backwards 1s ease-in-out backwards; 
+    animation: heart-backwards 1s ease-in-out backwards;
 }
 
 @keyframes heart {
     0% {
-       opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
 .heart:hover {
     @include heart-purple;
     animation: heart 1s ease-in-out forwards;
-      
+
 }
 
 #restaurants {
     margin-inline: 20px;
+
 
     @media only screen and (min-width: 992px) {
         padding-inline: 250px;
@@ -217,7 +225,8 @@ line-height: normal;
 }
 
 .how-it {
-    margin: 20px;
+    padding: 20px;
+    background: white;
 
     @media only screen and (min-width: 992px) {
         padding: 30px 250px;
@@ -423,9 +432,19 @@ line-height: normal;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         max-width: 634px;
+
         h3 {
             align-self: flex-end;
         }
+    }
+
+    .check {
+        color: $Tertiary-color;
+        background-color:white;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px; 
+        align-self: flex-end;
     }
 
     h3,
