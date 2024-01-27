@@ -386,12 +386,17 @@ html {
   align-self: flex-end;
 }
 .menu .check {
+  display: flex;
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  align-self: flex-end;
+  align-self: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
 }
 .menu h3,
 .menu p {

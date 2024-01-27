@@ -439,12 +439,23 @@ html {
     }
 
     .check {
+        
+        display:flex;
         color: $Tertiary-color;
         background-color:white;
         border-radius: 50%;
         height: 25px;
         width: 25px; 
-        align-self: flex-end;
+        align-self: center;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+        justify-content: center;
+        
+    }
+
+    .check:hover {
+        
     }
 
     h3,
