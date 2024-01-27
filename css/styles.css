@@ -60,7 +60,6 @@ html {
 }
 
 .main {
-  margin: 20px auto;
   width: 100%;
 }
 .main__book {
@@ -127,7 +126,51 @@ html {
   justify-content: center;
   border-radius: 40px 40px 0px 0px;
   background: var(--Background, #F6F6F6);
-  padding-top: 50px;
+  position: relative;
+  top: -50px;
+  max-width: 1055px;
+  width: 100%;
+}
+
+@keyframes heart-backwards {
+  0% {
+    opacity: 1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    opacity: 0;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+}
+.heart {
+  font-size: 24px;
+  font-weight: 300;
+  animation: heart-backwards 1s ease-in-out backwards;
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  animation: heart 1s ease-in-out forwards;
 }
 
 #restaurants {
@@ -334,6 +377,7 @@ html {
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  max-width: 634px;
 }
 .menu__item h3 {
   align-self: flex-end;

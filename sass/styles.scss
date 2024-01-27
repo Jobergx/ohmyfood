@@ -1,7 +1,13 @@
 $primary-color: #9356DC;
 $Secondary-color: #FF79DA;
 $Tertiary-color: #99E2D0;
-
+@mixin heart-purple { 
+    background: linear-gradient($Secondary-color, $primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
 
 
 html {
@@ -84,7 +90,7 @@ html {
 
 
 .main {
-    margin: 20px auto;
+    
     width: 100%;
     
 
@@ -161,12 +167,45 @@ line-height: normal;
         justify-content: center;
         border-radius: 40px 40px 0px 0px;
         background: var(--Background, #F6F6F6);
-        padding-top: 50px;
+        position: relative;
+        top: -50px;
+        max-width: 1055px;
+        width: 100%;
         
-
     }
 }
 
+@keyframes heart-backwards {
+    0% {
+       opacity: 1;
+       @include heart-purple;
+    }
+    100% {
+      opacity: 0;
+      @include heart-purple;
+    }
+}
+
+.heart {
+    font-size: 24px;
+    font-weight: 300;
+    animation: heart-backwards 1s ease-in-out backwards; 
+}
+
+@keyframes heart {
+    0% {
+       opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.heart:hover {
+    @include heart-purple;
+    animation: heart 1s ease-in-out forwards;
+      
+}
 
 #restaurants {
     margin-inline: 20px;
@@ -383,7 +422,7 @@ line-height: normal;
         padding: 15px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-
+        max-width: 634px;
         h3 {
             align-self: flex-end;
         }
