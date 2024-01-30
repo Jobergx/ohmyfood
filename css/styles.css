@@ -77,6 +77,9 @@ html {
   padding-inline: 12px;
 }
 @media only screen and (min-width: 992px) {
+  .main__book {
+    width: 100%;
+  }
   .main__book h2:first-child {
     font-size: 40px;
     font-style: normal;
@@ -95,8 +98,8 @@ html {
   .main__how-it-works {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-inline: 250px;
-    max-width: 1080px;
+    padding-inline: 160px;
+    max-width: 1440px;
   }
 }
 .main__explore-button {
@@ -180,7 +183,7 @@ html {
 }
 @media only screen and (min-width: 992px) {
   #restaurants {
-    padding-inline: 250px;
+    padding-inline: 160px;
   }
 }
 
@@ -190,7 +193,7 @@ html {
 }
 @media only screen and (min-width: 992px) {
   .how-it {
-    padding: 30px 250px;
+    padding: 30px 180px;
     background: white;
     margin: 0px;
   }
@@ -324,6 +327,7 @@ html {
   padding-left: 25px;
   gap: 16px;
   padding-bottom: 22px;
+  margin-bottom: -10px;
 }
 .footer a {
   text-decoration: none;
@@ -357,51 +361,6 @@ html {
   color: white;
   border: none;
   margin: 40px;
-}
-
-.menu {
-  padding: 20px;
-}
-.menu > h3 {
-  font-weight: 400;
-}
-.menu > h3::after {
-  content: "";
-  display: block;
-  width: 50px;
-  border: 2px solid #99E2D0;
-  margin-top: 4px;
-}
-.menu__item {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  margin: 12px 0px;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  max-width: 634px;
-}
-.menu__item h3 {
-  align-self: flex-end;
-}
-.menu .check {
-  display: flex;
-  color: #99E2D0;
-  background-color: white;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  align-self: center;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
-  justify-content: center;
-}
-.menu h3,
-.menu p {
-  margin: 0px;
-  padding: 0px;
 }
 
 .restaurant {

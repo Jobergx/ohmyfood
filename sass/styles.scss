@@ -118,6 +118,7 @@ html {
                 font-style: normal;
                 font-weight: 700;
             }
+            width: 100%;
         }
 
     }
@@ -136,8 +137,8 @@ html {
         @media only screen and (min-width: 992px) {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            padding-inline: 250px;
-            max-width: 1080px;
+            padding-inline: 160px;
+            max-width: 1440px;
         }
     }
 
@@ -219,7 +220,7 @@ html {
 
 
     @media only screen and (min-width: 992px) {
-        padding-inline: 250px;
+        padding-inline: 160px;
     }
 
 }
@@ -229,7 +230,7 @@ html {
     background: white;
 
     @media only screen and (min-width: 992px) {
-        padding: 30px 250px;
+        padding: 30px 180px;
         background: white;
         margin: 0px;
     }
@@ -369,6 +370,7 @@ html {
     padding-left: 25px;
     gap: 16px;
     padding-bottom: 22px;
+    margin-bottom: -10px;
 
     a {
         text-decoration: none;
@@ -407,63 +409,7 @@ html {
     }
 }
 
-.menu {
 
-    padding: 20px;
-
-    >h3 {
-        font-weight: 400;
-
-        &::after {
-            content: "";
-            display: block;
-            width: 50px;
-            border: 2px solid $Tertiary-color;
-            margin-top: 4px;
-        }
-    }
-
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        margin: 12px 0px;
-        padding: 15px;
-        border-radius: 15px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-        max-width: 634px;
-
-        h3 {
-            align-self: flex-end;
-        }
-    }
-
-    .check {
-        
-        display:flex;
-        color: $Tertiary-color;
-        background-color:white;
-        border-radius: 50%;
-        height: 25px;
-        width: 25px; 
-        align-self: center;
-        align-items: center;
-        margin: 0px;
-        padding: 0px;
-        justify-content: center;
-        
-    }
-
-    .check:hover {
-        
-    }
-
-    h3,
-    p {
-        margin: 0px;
-        padding: 0px;
-    }
-}
 
 .restaurant {
     display: flex;
