@@ -15,12 +15,13 @@ html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     background: var(--Background, #F6F6F6);
+    
 }
 
 .body {
     display: grid;
     grid-template-columns: 1fr;
-
+    
 }
 
 
@@ -126,19 +127,19 @@ html {
     &__how-it-works {
         display: flex;
         flex-direction: column;
-        width: 100%;
         justify-content: center;
         flex-shrink: inherit;
         background: white;
+        padding-bottom: 40px;
 
 
 
 
         @media only screen and (min-width: 992px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            flex-direction: row;
             padding-inline: 160px;
-            max-width: 1440px;
+            
         }
     }
 
@@ -175,8 +176,12 @@ html {
         background: var(--Background, #F6F6F6);
         position: relative;
         top: -50px;
-        max-width: 1055px;
+        max-width: 65rem;
         width: 100%;
+
+        @media only screen and (min-width: 992px)  {
+            left: 20rem;
+        }
 
     }
 }
@@ -230,7 +235,7 @@ html {
     background: white;
 
     @media only screen and (min-width: 992px) {
-        padding: 30px 180px;
+        padding: 2rem 13rem;
         background: white;
         margin: 0px;
     }
@@ -293,6 +298,8 @@ html {
     @media only screen and (min-width: 992px) {
         padding-left: 0px;
         gap: 0px;
+        flex: 1;
+        max-width: 380px;
     }
 
 
@@ -363,14 +370,17 @@ html {
     }
 }
 
-.footer {
+
+
+
+.footer, .footer__item {
     background-color: #353535;
     display: flex;
     flex-direction: column;
     padding-left: 25px;
     gap: 16px;
     padding-bottom: 22px;
-    margin-bottom: -10px;
+    margin-bottom: -22px;
 
     a {
         text-decoration: none;
@@ -385,14 +395,35 @@ html {
 
     @media only screen and (min-width: 992px) {
         display: flex;
-        flex-direction: row;
-        width: 100%;
+        flex-direction: row-reverse;
+        
         height: 114px;
-        justify-content: flex-end;
+        
         align-items: flex-end;
+        padding-right: 55px;
+    }
+    &__item {
+        @media only screen and (min-width: 992px) {
+            
+            display: flex;
+            flex-direction: row;
+            padding-left: 25px;
+            gap: 16px;
+           
+        }
     }
 
+    &__logo {
+        @media only screen and (min-width: 992px){
+            display: block !important;
+            filter: invert(100%);
+            padding-top: 22px;
+            height: 27px;
+        }
+    }
 }
+
+
 
 .rest {
     display: flex;
@@ -432,4 +463,14 @@ html {
 
 
     }
+}
+
+.new {
+    background-color: #99e2d0;
+    color: #008766;
+    padding: 0.5rem 2rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
 }
