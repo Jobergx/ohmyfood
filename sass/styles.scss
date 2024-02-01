@@ -10,18 +10,22 @@ $Tertiary-color: #99E2D0;
     font-weight: bold;
 }
 
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     background: var(--Background, #F6F6F6);
-    
+
 }
 
 .body {
     display: grid;
     grid-template-columns: 1fr;
-    
+
 }
 
 
@@ -112,6 +116,7 @@ html {
         font-weight: 300;
         line-height: normal;
         padding-inline: 12px;
+        padding-bottom: 57px;
 
         @media only screen and (min-width: 992px) {
             h2:first-child {
@@ -119,6 +124,7 @@ html {
                 font-style: normal;
                 font-weight: 700;
             }
+
             width: 100%;
         }
 
@@ -139,7 +145,7 @@ html {
             display: flex;
             flex-direction: row;
             padding-inline: 160px;
-            
+
         }
     }
 
@@ -155,7 +161,7 @@ html {
         transition-timing-function: ease-in-out;
 
         @media only screen and (min-width: 992px) {
-            margin-bottom: 30px;
+            
         }
     }
 
@@ -165,7 +171,7 @@ html {
     }
 
     &__button {
-        padding-bottom: 57px;
+       
     }
 
     &__body {
@@ -179,7 +185,7 @@ html {
         max-width: 65rem;
         width: 100%;
 
-        @media only screen and (min-width: 992px)  {
+        @media only screen and (min-width: 992px) {
             left: 20rem;
         }
 
@@ -226,7 +232,23 @@ html {
 
     @media only screen and (min-width: 992px) {
         padding-inline: 160px;
+        margin: 0px;
+        padding-top: 50px;
     }
+
+}
+
+
+
+
+.west::before {
+    content: "Restaurants";
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    position: absolute;
+    top: -3rem;
+
 
 }
 
@@ -324,11 +346,14 @@ html {
 
 .restaurant-main {
     @media only screen and (min-width: 992px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 50px 100px;
-
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: auto;
+        row-gap: 50px;
+        column-gap: 100px;
+        padding-bottom: 50px;
     }
 }
 
@@ -373,7 +398,8 @@ html {
 
 
 
-.footer, .footer__item {
+.footer,
+.footer__item {
     background-color: #353535;
     display: flex;
     flex-direction: column;
@@ -396,25 +422,26 @@ html {
     @media only screen and (min-width: 992px) {
         display: flex;
         flex-direction: row-reverse;
-        
+
         height: 114px;
-        
+
         align-items: flex-end;
         padding-right: 55px;
     }
+
     &__item {
         @media only screen and (min-width: 992px) {
-            
+
             display: flex;
             flex-direction: row;
             padding-left: 25px;
             gap: 16px;
-           
+
         }
     }
 
     &__logo {
-        @media only screen and (min-width: 992px){
+        @media only screen and (min-width: 992px) {
             display: block !important;
             filter: invert(100%);
             padding-top: 22px;
