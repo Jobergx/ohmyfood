@@ -227,7 +227,7 @@ html {
 }
 
 #restaurants {
-    margin-inline: 20px;
+    margin-inline: auto;
 
 
     @media only screen and (min-width: 992px) {
@@ -316,12 +316,14 @@ html {
     margin: 20px 15px;
     padding-left: 50px;
     margin-left: 30px;
+    max-width: 380px;
+    min-width: 250px;
 
     @media only screen and (min-width: 992px) {
         padding-left: 0px;
         gap: 0px;
         flex: 1;
-        max-width: 380px;
+        
     }
 
 
