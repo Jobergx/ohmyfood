@@ -181,7 +181,8 @@ html {
 }
 
 #restaurants {
-  margin-inline: auto;
+  margin-inline: 12px;
+  padding-top: 50px;
 }
 @media only screen and (min-width: 992px) {
   #restaurants {
@@ -193,6 +194,15 @@ html {
 
 .west::before {
   content: "Restaurants";
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  position: absolute;
+  top: -3rem;
+}
+
+.how::before {
+  content: "How it works";
   font-family: Roboto;
   font-weight: 700;
   font-size: 24px;
@@ -294,6 +304,9 @@ html {
     left: -40px;
     flex-shrink: inherit;
   }
+}
+.works-items p {
+  padding-right: 20px;
 }
 
 @media only screen and (min-width: 992px) {
