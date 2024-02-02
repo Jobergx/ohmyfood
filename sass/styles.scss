@@ -231,11 +231,19 @@ html {
 #restaurants {
     margin-inline: 12px;
     padding-top: 50px;
+    
 
-    @media only screen and (min-width: 992px) {
-        padding-inline: 160px;
-        margin: 0px;
-        padding-top: 50px;
+    @media only screen and (min-width: 768px) {
+        
+        margin: auto;
+        max-width: 1024px;
+        div {
+            display: flex;
+            
+            flex-wrap: wrap;
+            gap: 50px;
+            
+        }
     }
 
 }
@@ -243,16 +251,6 @@ html {
 
 
 
-.west::before {
-    content: "Restaurants";
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 24px;
-    position: absolute;
-    top: -3rem;
-
-
-}
 
 .how::before {
     content: "How it works";
@@ -287,8 +285,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     background-color: #9356DC;
     color: white;
     border-radius: 50%;
@@ -379,7 +377,6 @@ html {
 .card {
     position: relative;
     width: 100%;
-    max-width: 490px;
     margin: 18px 0px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
@@ -403,7 +400,7 @@ html {
         justify-content: space-between;
         align-items: center;
         padding: 16px;
-        max-width: 490px;
+       
 
 
         h3,
@@ -411,6 +408,11 @@ html {
             margin: 0;
             margin-bottom: 8px;
         }
+    }
+    @media only screen and (min-width: 768px) {
+        flex: 1 1 45%;
+        min-width: 360px;
+
     }
 }
 
