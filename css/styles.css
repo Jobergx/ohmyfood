@@ -209,16 +209,13 @@ html {
   top: -3rem;
 }
 
+.white {
+  background: white;
+}
+
 .how-it {
   padding: 20px;
   background: white;
-}
-@media only screen and (min-width: 768px) {
-  .how-it {
-    padding: 2rem 13rem;
-    background: white;
-    margin: 0px;
-  }
 }
 
 .fa-mobile-screen-button,
@@ -469,8 +466,14 @@ html {
   animation: spin 1.5s linear infinite;
   position: absolute;
   top: 35%;
-  left: 44%;
+  left: 28%;
   transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 768px) {
+  .loader {
+    top: 35%;
+    left: 45.5%;
+  }
 }
 
 @keyframes spin {
