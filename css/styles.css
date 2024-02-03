@@ -82,10 +82,7 @@ html {
   padding-inline: 12px;
   padding-bottom: 57px;
 }
-@media only screen and (min-width: 992px) {
-  .main__book {
-    width: 100%;
-  }
+@media only screen and (min-width: 768px) {
   .main__book h2:first-child {
     font-size: 40px;
     font-style: normal;
@@ -100,11 +97,12 @@ html {
   background: white;
   padding-bottom: 40px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .main__how-it-works {
     display: flex;
     flex-direction: row;
-    padding-inline: 160px;
+    max-width: 1024px;
+    margin: auto;
   }
 }
 .main__explore-button {
@@ -133,7 +131,7 @@ html {
   max-width: 65rem;
   width: 100%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .main__body {
     left: 20rem;
   }
@@ -180,6 +178,11 @@ html {
   animation: heart 1s ease-in-out forwards;
 }
 
+.how {
+  max-width: 1024px;
+  margin: auto;
+}
+
 #restaurants {
   margin-inline: 12px;
   padding-top: 50px;
@@ -187,7 +190,7 @@ html {
 @media only screen and (min-width: 768px) {
   #restaurants {
     margin: auto;
-    max-width: 1080px;
+    max-width: 1024px;
     justify-content: flex-start;
   }
   #restaurants div {
@@ -210,7 +213,7 @@ html {
   padding: 20px;
   background: white;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .how-it {
     padding: 2rem 13rem;
     background: white;
@@ -241,7 +244,7 @@ html {
   left: -1%;
   margin-left: 25px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .fa-1,
   .fa-2,
   .fa-3 {
@@ -277,7 +280,7 @@ html {
   max-width: 380px;
   min-width: 250px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .how-it-works {
     padding-left: 0px;
     gap: 0px;
@@ -295,7 +298,7 @@ html {
   align-items: center;
   gap: 20px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .works-items {
     left: -40px;
     flex-shrink: inherit;
@@ -305,7 +308,7 @@ html {
   padding-right: 20px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .restaurant-main {
     display: flex;
     flex-direction: row;
@@ -374,7 +377,7 @@ html {
   padding-top: 22px;
   height: 27px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .footer,
   .footer__item {
     display: flex;
@@ -384,7 +387,7 @@ html {
     padding-right: 55px;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .footer__item,
   .footer__item__item {
     display: flex;
@@ -393,7 +396,7 @@ html {
     gap: 16px;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .footer__logo,
   .footer__item__logo {
     display: block !important;
@@ -458,15 +461,15 @@ html {
 }
 
 .loader {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   border: 8px solid #f3f3f3;
   border-top: 8px solid #99E2D0;
   border-radius: 50%;
   animation: spin 1.5s linear infinite;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 35%;
+  left: 44%;
   transform: translate(-50%, -50%);
 }
 
