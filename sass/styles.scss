@@ -266,15 +266,15 @@ html {
 
 }
 
-.white {
-    background: white;
-}
-
 .how-it {
     padding: 20px;
     background: white;
 
-  
+    @media only screen and (min-width: 768px) {
+        padding: 2rem 13rem;
+        background: white;
+        margin: 0px;
+    }
 }
 
 .fa-mobile-screen-button,
@@ -346,7 +346,9 @@ html {
 .fa-store {
     color: $primary-color;
 }
-
+.white {
+    background: white;
+}
 .works-items {
     display: flex;
     flex-direction: row;
@@ -554,7 +556,7 @@ html {
 
     @media only screen and (min-width: 768px) {
         top: 35%;
-        left: 45.5%;
+        left: 45%;
     }
 
 }
