@@ -23,6 +23,7 @@ html {
     display: grid;
     grid-template-columns: 1fr;
 
+    
 }
 
 
@@ -183,11 +184,11 @@ html {
         background: var(--Background, #F6F6F6);
         position: relative;
         top: -50px;
-        max-width: 1055px;
+        max-width: 1024px;
         width: 100%;
         margin: auto;
 
-
+        
 
     }
 }
@@ -229,6 +230,11 @@ html {
 .how {
     max-width: 1024px;
     margin: auto;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        position: absolute;
+        left: 20px;
+        top:25rem;
+    }
 }
 
 #restaurants {
@@ -368,6 +374,11 @@ html {
         row-gap: 50px;
         column-gap: 100px;
         padding-bottom: 50px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-inline: 20px;
+        padding-inline: 20px;
     }
 }
 
