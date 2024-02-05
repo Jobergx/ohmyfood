@@ -183,7 +183,7 @@ html {
         width: 100%;
         margin: auto;
 
-       
+
 
     }
 }
@@ -250,18 +250,6 @@ html {
 }
 
 
-
-
-
-.how::before {
-    content: "How it works";
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 24px;
-    position: absolute;
-    top: -3rem;
-
-}
 
 .how-it {
     padding: 20px;
@@ -584,49 +572,68 @@ html {
 
     display: flex;
     flex-direction: column;
-    padding-inline: 12px;
-    gap: 12px;
-max-width: 640px;
-width: 100%;
-align-self: center;
+    flex: 1;
+    gap: 15px;
 
-    &__item {
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: row;
+    max-width: 640px;
+    width: 100%;
+    align-self: center;
+
+    >h3 {
+        font-weight: 400;
         padding-left: 12px;
-        flex: 1;
-        
-        
 
-        &__text {
-
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex: 1;
-            text-overflow: ellipsis;
-           
-
-            h3 {
-                margin-bottom: 0px;
-            }
-
-            p {
-                margin-top: 0px;
-            }
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            border: 2px solid $Tertiary-color;
+            margin-top: 4px;
         }
     }
 
-.price{
-  
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        margin: 0px 12px;
+        padding-inline: 15px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        height: 69px;
+
+        &__text {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin: 0px;
+           
+        }
+        p {
+            margin: 0px;
+            padding: 0px;
+            margin-top: 7px;
+         }
+        h3 {
+            align-self: flex-end;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 9px;
+            margin-bottom: 9px;
+        }
+    }
+
+
+
+
+
+
+
 }
 
-.check{
-   
+.price {
+    align-self: flex-end;
 }
 
+.check {
+    display: none;
 }
