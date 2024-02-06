@@ -23,7 +23,7 @@ html {
     display: grid;
     grid-template-columns: 1fr;
 
-    
+
 }
 
 
@@ -87,6 +87,7 @@ html {
 
     &__arrow {
         color: black;
+
         @media only screen and (min-width: 768px) {
             position: absolute;
             left: 30px;
@@ -188,7 +189,7 @@ html {
         width: 100%;
         margin: auto;
 
-        
+
 
     }
 }
@@ -230,10 +231,11 @@ html {
 .how {
     max-width: 1024px;
     margin: auto;
+
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
         position: absolute;
         left: 20px;
-        top:25rem;
+        top: 25rem;
     }
 }
 
@@ -612,7 +614,7 @@ html {
         justify-content: space-between;
         background-color: white;
         margin: 0px 12px;
-        padding-inline: 15px;
+        padding-left: 15px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         height: 69px;
@@ -621,19 +623,22 @@ html {
             padding-top: 0px;
             padding-bottom: 0px;
             margin: 0px;
-           
+
         }
+
         p {
+            font-weight: 300;
             margin: 0px;
             padding: 0px;
-            margin-top: 7px;
-         }
+           
+            text-overflow: ellipsis;
+        }
+
         h3 {
             align-self: flex-end;
             margin: 0px;
             padding: 0px;
-            margin-top: 12px;
-            margin-bottom: 9px;
+            margin-top: 7px;
         }
     }
 
@@ -646,9 +651,57 @@ html {
 }
 
 .price {
-    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex: 1;
+    min-width: 560px;
+    justify-content: space-between;
+    max-width: 590px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    font-weight: bold;
 }
 
 .check {
-    display: none;
+    opacity: 1;
+    display: flex;
+    flex: 1;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    max-width: 27px;
+    max-height: 27px;
+    color: $Tertiary-color;
+    background-color: white;
+    transition: all;
+    z-index: 1;
+   
+
+    &__background {
+       
+        opacity: 0;
+        display: contents;
+        justify-self: flex-end;
+        justify-content: center;
+        background: $Tertiary-color;
+        width: 100px;
+        height: 100%;
+        border-radius: 0px 15px 15px 0px;
+        transition: all;
+        
+        
+    }
+
+    &__background:hover {
+        opacity: 1;
+        display: flex;
+
+    }
+  
 }

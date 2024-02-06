@@ -526,7 +526,7 @@ html {
   justify-content: space-between;
   background-color: white;
   margin: 0px 12px;
-  padding-inline: 15px;
+  padding-left: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   height: 69px;
@@ -537,24 +537,64 @@ html {
   margin: 0px;
 }
 .menu__item p {
+  font-weight: 300;
   margin: 0px;
   padding: 0px;
-  margin-top: 7px;
+  text-overflow: ellipsis;
 }
 .menu__item h3 {
   align-self: flex-end;
   margin: 0px;
   padding: 0px;
-  margin-top: 12px;
-  margin-bottom: 9px;
+  margin-top: 7px;
 }
 
 .price {
-  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex: 1;
+  min-width: 560px;
+  justify-content: space-between;
+  max-width: 590px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5px;
+  text-overflow: ellipsis;
+  font-weight: bold;
 }
 
 .check {
-  display: none;
+  opacity: 1;
+  display: flex;
+  flex: 1;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  max-width: 27px;
+  max-height: 27px;
+  color: #99E2D0;
+  background-color: white;
+  transition: all;
+  z-index: 1;
+}
+.check__background {
+  opacity: 0;
+  display: contents;
+  justify-self: flex-end;
+  justify-content: center;
+  background: #99E2D0;
+  width: 100px;
+  height: 100%;
+  border-radius: 0px 15px 15px 0px;
+  transition: all;
+}
+.check__background:hover {
+  opacity: 1;
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
