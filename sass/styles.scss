@@ -165,8 +165,6 @@ html {
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         transition: all .3s;
         transition-timing-function: ease-in-out;
-
-        @media only screen and (min-width: 768px) {}
     }
 
     &__explore-button:hover {
@@ -610,11 +608,11 @@ html {
     }
 
     &__item {
-        display: flex;
+        
         justify-content: space-between;
         background-color: white;
         margin: 0px 12px;
-        padding-left: 15px;
+        padding-inline: 15px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         height: 69px;
@@ -626,11 +624,15 @@ html {
 
         }
 
+        &__name {
+            width: 100%;
+        }
+
         p {
             font-weight: 300;
             margin: 0px;
             padding: 0px;
-           
+
             text-overflow: ellipsis;
         }
 
@@ -640,8 +642,17 @@ html {
             padding: 0px;
             margin-top: 7px;
         }
+
+        &__item::after,
+        &__item:hover {
+            content: '<i class="fa-solid fa-check check"></i>';
+            opacity: 1;
+            height: 100%;
+            width: 100px;
+        }
     }
 
+   
 
 
 
@@ -655,9 +666,7 @@ html {
     flex-direction: row;
     align-items: baseline;
     flex: 1;
-    min-width: 560px;
     justify-content: space-between;
-    max-width: 590px;
     margin: 0px;
     padding: 0px;
     margin-top: 5px;
@@ -666,6 +675,7 @@ html {
 }
 
 .check {
+    
     opacity: 1;
     display: flex;
     flex: 1;
@@ -684,9 +694,9 @@ html {
    
 
     &__background {
-       
-        opacity: 0;
-        display: contents;
+
+        opacity: 1;
+        display: flex;
         justify-self: flex-end;
         justify-content: center;
         background: $Tertiary-color;
@@ -694,8 +704,8 @@ html {
         height: 100%;
         border-radius: 0px 15px 15px 0px;
         transition: all;
-        
-        
+
+
     }
 
     &__background:hover {
@@ -703,5 +713,7 @@ html {
         display: flex;
 
     }
-  
+.check:hover {
+
+}
 }

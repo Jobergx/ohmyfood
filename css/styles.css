@@ -522,11 +522,10 @@ html {
   margin-top: 4px;
 }
 .menu__item {
-  display: flex;
   justify-content: space-between;
   background-color: white;
   margin: 0px 12px;
-  padding-left: 15px;
+  padding-inline: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   height: 69px;
@@ -535,6 +534,9 @@ html {
   padding-top: 0px;
   padding-bottom: 0px;
   margin: 0px;
+}
+.menu__item__name {
+  width: 100%;
 }
 .menu__item p {
   font-weight: 300;
@@ -548,15 +550,19 @@ html {
   padding: 0px;
   margin-top: 7px;
 }
+.menu__item__item::after, .menu__item__item:hover {
+  content: '<i class="fa-solid fa-check check"></i>';
+  opacity: 1;
+  height: 100%;
+  width: 100px;
+}
 
 .price {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   flex: 1;
-  min-width: 560px;
   justify-content: space-between;
-  max-width: 590px;
   margin: 0px;
   padding: 0px;
   margin-top: 5px;
@@ -582,8 +588,8 @@ html {
   z-index: 1;
 }
 .check__background {
-  opacity: 0;
-  display: contents;
+  opacity: 1;
+  display: flex;
   justify-self: flex-end;
   justify-content: center;
   background: #99E2D0;
