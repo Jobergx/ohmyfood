@@ -607,12 +607,16 @@ html {
         }
     }
 
+
+
     &__item {
-        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         justify-content: space-between;
         background-color: white;
         margin: 0px 12px;
-        padding-inline: 15px;
+        padding-left: 15px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         height: 69px;
@@ -622,6 +626,38 @@ html {
             padding-bottom: 0px;
             margin: 0px;
 
+        }
+
+        &:hover .item4 {
+            display: block;
+            animation: slide-in 1.5s ease-in-out;
+        }
+
+            &:hover .item3 {
+            display: block;
+        
+            position: sticky;
+        
+           } 
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-out {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
         }
 
         &__name {
@@ -642,19 +678,15 @@ html {
             padding: 0px;
             margin-top: 7px;
             transition: all;
-            
         }
-       
-    
+
+
+
     }
 
- .move {
-   padding-right: 20px;
-    &:hover {
-        transform: translateX(-100px);
-      }
-    
- }  
+
+
+
 
 
 
@@ -663,21 +695,39 @@ html {
 
 }
 
-.price {
+.hidden {
+    display: none;
+}
+
+.item1,
+.item2 {
+    width: 100%;
+}
+
+.item3,
+.item4 {
+    width: 50%;
+}
+
+
+.item3 {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-    flex: 1;
-    justify-content: space-between;
+    align-items: flex-end;
     margin: 0px;
     padding: 0px;
     margin-top: 5px;
     text-overflow: ellipsis;
     font-weight: bold;
+    position: relative;
+    left: 14rem;
+
 }
 
 .check {
-    
+    position: relative;
+    left: 30px;
+    top: 20px;
     opacity: 1;
     display: flex;
     flex: 1;
@@ -691,27 +741,23 @@ html {
     max-height: 27px;
     color: $Tertiary-color;
     background-color: white;
-    transition: all;
-    z-index: 1;
-   
+
+
 
     &__background {
-        
+
         opacity: 1;
-        display: flex;
+
+        justify-self: flex-end;
         justify-content: center;
         background: $Tertiary-color;
         width: 100px;
         height: 100%;
         border-radius: 0px 15px 15px 0px;
-        transition: all;
 
-        @media only screen and (min-width: 768px) {
-            position: relative;
-        left: 501px;
-        top: -62px;
-        }
+
+
     }
 
-   
+
 }
