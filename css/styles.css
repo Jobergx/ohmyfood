@@ -549,12 +549,13 @@ html {
   margin: 0px;
   padding: 0px;
   margin-top: 7px;
+  transition: all;
 }
-.menu__item__item::after, .menu__item__item:hover {
-  content: '<i class="fa-solid fa-check check"></i>';
-  opacity: 1;
-  height: 100%;
-  width: 100px;
+.menu .move {
+  padding-right: 20px;
+}
+.menu .move:hover {
+  transform: translateX(-100px);
 }
 
 .price {
@@ -590,7 +591,6 @@ html {
 .check__background {
   opacity: 1;
   display: flex;
-  justify-self: flex-end;
   justify-content: center;
   background: #99E2D0;
   width: 100px;
@@ -598,9 +598,12 @@ html {
   border-radius: 0px 15px 15px 0px;
   transition: all;
 }
-.check__background:hover {
-  opacity: 1;
-  display: flex;
+@media only screen and (min-width: 768px) {
+  .check__background {
+    position: relative;
+    left: 501px;
+    top: -62px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

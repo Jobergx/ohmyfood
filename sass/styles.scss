@@ -641,18 +641,20 @@ html {
             margin: 0px;
             padding: 0px;
             margin-top: 7px;
+            transition: all;
+            
         }
-
-        &__item::after,
-        &__item:hover {
-            content: '<i class="fa-solid fa-check check"></i>';
-            opacity: 1;
-            height: 100%;
-            width: 100px;
-        }
+       
+    
     }
 
-   
+ .move {
+   padding-right: 20px;
+    &:hover {
+        transform: translateX(-100px);
+      }
+    
+ }  
 
 
 
@@ -694,10 +696,9 @@ html {
    
 
     &__background {
-
+        
         opacity: 1;
         display: flex;
-        justify-self: flex-end;
         justify-content: center;
         background: $Tertiary-color;
         width: 100px;
@@ -705,15 +706,12 @@ html {
         border-radius: 0px 15px 15px 0px;
         transition: all;
 
-
+        @media only screen and (min-width: 768px) {
+            position: relative;
+        left: 501px;
+        top: -62px;
+        }
     }
 
-    &__background:hover {
-        opacity: 1;
-        display: flex;
-
-    }
-.check:hover {
-
-}
+   
 }
