@@ -501,6 +501,39 @@ html {
     opacity: 0;
   }
 }
+.item1,
+.item2 {
+  width: 100%;
+}
+
+.item3 {
+  width: 50%;
+  overflow: hidden;
+}
+
+.item4, .check {
+  width: 0%;
+  overflow: hidden;
+}
+
+.item3 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5px;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  position: relative;
+  left: 8rem;
+}
+@media only screen and (min-width: 768px) {
+  .item3 {
+    left: 20rem;
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -539,12 +572,20 @@ html {
   margin: 0px;
 }
 .menu__item:hover .item4 {
-  display: block;
-  animation: slide-in 1.5s ease-in-out;
+  transition: transform 1000ms linear;
+  width: 70px;
+}
+.menu__item:hover .check {
+  display: flex;
 }
 .menu__item:hover .item3 {
   display: block;
-  position: sticky;
+  left: 6rem;
+}
+@media only screen and (min-width: 768px) {
+  .menu__item:hover .item3 {
+    left: 17rem;
+  }
 }
 @keyframes slide-in {
   from {
@@ -572,46 +613,18 @@ html {
   text-overflow: ellipsis;
 }
 .menu__item h3 {
-  align-self: flex-end;
   margin: 0px;
   padding: 0px;
   margin-top: 7px;
   transition: all;
 }
 
-.hidden {
-  display: none;
-}
-
-.item1,
-.item2 {
-  width: 100%;
-}
-
-.item3,
-.item4 {
-  width: 50%;
-}
-
-.item3 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin: 0px;
-  padding: 0px;
-  margin-top: 5px;
-  text-overflow: ellipsis;
-  font-weight: bold;
-  position: relative;
-  left: 14rem;
-}
-
 .check {
   position: relative;
-  left: 30px;
+  left: 20px;
   top: 20px;
   opacity: 1;
-  display: flex;
+  display: none;
   flex: 1;
   align-self: center;
   align-items: center;
@@ -629,7 +642,7 @@ html {
   justify-self: flex-end;
   justify-content: center;
   background: #99E2D0;
-  width: 100px;
+  width: 0%;
   height: 100%;
   border-radius: 0px 15px 15px 0px;
 }

@@ -582,7 +582,37 @@ html {
         opacity: 0;
     }
 }
+.item1,
+.item2 {
+    width: 100%;
+}
 
+.item3 {
+    width: 50%;
+    overflow: hidden;
+}
+.item4, .check {
+    width: 0%;
+    overflow: hidden;
+}
+
+.item3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    position: relative;
+    left: 8rem;
+    @media only screen and (min-width: 768px) {
+        
+        left: 20rem;
+    }
+
+}
 .menu {
 
     display: flex;
@@ -629,16 +659,24 @@ html {
         }
 
         &:hover .item4 {
-            display: block;
-            animation: slide-in 1.5s ease-in-out;
+            transition: transform 1000ms linear;
+            width: 70px;
         }
 
-            &:hover .item3 {
+        &:hover .check {
+            display: flex;
+        }
+
+        &:hover .item3 {
             display: block;
-        
-            position: sticky;
-        
-           } 
+            left: 6rem;
+            @media only screen and (min-width: 768px) {
+            
+                left: 17rem;
+            }
+            
+
+        }
 
         @keyframes slide-in {
             from {
@@ -673,7 +711,7 @@ html {
         }
 
         h3 {
-            align-self: flex-end;
+        
             margin: 0px;
             padding: 0px;
             margin-top: 7px;
@@ -695,41 +733,15 @@ html {
 
 }
 
-.hidden {
-    display: none;
-}
-
-.item1,
-.item2 {
-    width: 100%;
-}
-
-.item3,
-.item4 {
-    width: 50%;
-}
 
 
-.item3 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 5px;
-    text-overflow: ellipsis;
-    font-weight: bold;
-    position: relative;
-    left: 14rem;
-
-}
 
 .check {
     position: relative;
-    left: 30px;
+    left: 20px;
     top: 20px;
     opacity: 1;
-    display: flex;
+    display: none;
     flex: 1;
     align-self: center;
     align-items: center;
@@ -751,7 +763,7 @@ html {
         justify-self: flex-end;
         justify-content: center;
         background: $Tertiary-color;
-        width: 100px;
+        width: 0%;
         height: 100%;
         border-radius: 0px 15px 15px 0px;
 
