@@ -588,14 +588,23 @@ html {
 }
 
 .item3 {
-    width: 50%;
+    width: 50px;
     overflow: hidden;
 }
 .item4, .check {
     width: 0%;
     overflow: hidden;
+    animation: slide-in 1s ease-in-out;
 }
 
+@keyframes slide-in {
+    from {
+        transform: translate(-50%);
+    }
+    to {
+        transform: translate(0);
+    }
+}
 .item3 {
     display: flex;
     flex-direction: row;
@@ -606,10 +615,10 @@ html {
     text-overflow: ellipsis;
     font-weight: bold;
     position: relative;
-    left: 8rem;
+    left: 4rem;
     @media only screen and (min-width: 768px) {
         
-        left: 20rem;
+        left: 12rem;
     }
 
 }
@@ -659,20 +668,22 @@ html {
         }
 
         &:hover .item4 {
-            transition: transform 1000ms linear;
+           
             width: 70px;
         }
 
         &:hover .check {
             display: flex;
+            
         }
 
         &:hover .item3 {
             display: block;
-            left: 6rem;
+            left: 2rem;
+            
             @media only screen and (min-width: 768px) {
             
-                left: 17rem;
+                left: 9rem;
             }
             
 
@@ -753,7 +764,7 @@ html {
     max-height: 27px;
     color: $Tertiary-color;
     background-color: white;
-
+    animation: slide-in 1s ease-in-out;
 
 
     &__background {
@@ -766,7 +777,7 @@ html {
         width: 0%;
         height: 100%;
         border-radius: 0px 15px 15px 0px;
-
+        animation: slide-in 1s ease-in-out;
 
 
     }

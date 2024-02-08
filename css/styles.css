@@ -507,15 +507,24 @@ html {
 }
 
 .item3 {
-  width: 50%;
+  width: 50px;
   overflow: hidden;
 }
 
 .item4, .check {
   width: 0%;
   overflow: hidden;
+  animation: slide-in 1s ease-in-out;
 }
 
+@keyframes slide-in {
+  from {
+    transform: translate(-50%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
 .item3 {
   display: flex;
   flex-direction: row;
@@ -526,11 +535,11 @@ html {
   text-overflow: ellipsis;
   font-weight: bold;
   position: relative;
-  left: 8rem;
+  left: 4rem;
 }
 @media only screen and (min-width: 768px) {
   .item3 {
-    left: 20rem;
+    left: 12rem;
   }
 }
 
@@ -572,7 +581,6 @@ html {
   margin: 0px;
 }
 .menu__item:hover .item4 {
-  transition: transform 1000ms linear;
   width: 70px;
 }
 .menu__item:hover .check {
@@ -580,11 +588,11 @@ html {
 }
 .menu__item:hover .item3 {
   display: block;
-  left: 6rem;
+  left: 2rem;
 }
 @media only screen and (min-width: 768px) {
   .menu__item:hover .item3 {
-    left: 17rem;
+    left: 9rem;
   }
 }
 @keyframes slide-in {
@@ -636,6 +644,7 @@ html {
   max-height: 27px;
   color: #99E2D0;
   background-color: white;
+  animation: slide-in 1s ease-in-out;
 }
 .check__background {
   opacity: 1;
@@ -645,6 +654,7 @@ html {
   width: 0%;
   height: 100%;
   border-radius: 0px 15px 15px 0px;
+  animation: slide-in 1s ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */
