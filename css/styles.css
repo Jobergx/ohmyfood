@@ -503,18 +503,27 @@ html {
 }
 .item1,
 .item2 {
-  width: 100%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .item3 {
-  width: 50px;
+  align-items: flex-end;
+  flex-grow: 1;
+  padding-right: 12px;
+  width: 10%;
   overflow: hidden;
+  transition: left 1s 0.7s ease-in-out;
+  direction: rtl;
+  margin-top: 50px;
 }
 
-.item4, .check {
+.item4 {
+  flex-grow: 0;
   width: 0%;
   overflow: hidden;
-  animation: slide-in 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 @keyframes slide-in {
@@ -525,24 +534,6 @@ html {
     transform: translate(0);
   }
 }
-.item3 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin: 0px;
-  padding: 0px;
-  margin-top: 5px;
-  text-overflow: ellipsis;
-  font-weight: bold;
-  position: relative;
-  left: 4rem;
-}
-@media only screen and (min-width: 768px) {
-  .item3 {
-    left: 12rem;
-  }
-}
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -586,15 +577,6 @@ html {
 .menu__item:hover .check {
   display: flex;
 }
-.menu__item:hover .item3 {
-  display: block;
-  left: 2rem;
-}
-@media only screen and (min-width: 768px) {
-  .menu__item:hover .item3 {
-    left: 9rem;
-  }
-}
 @keyframes slide-in {
   from {
     transform: translateX(100%);
@@ -620,12 +602,6 @@ html {
   padding: 0px;
   text-overflow: ellipsis;
 }
-.menu__item h3 {
-  margin: 0px;
-  padding: 0px;
-  margin-top: 7px;
-  transition: all;
-}
 
 .check {
   position: relative;
@@ -644,7 +620,6 @@ html {
   max-height: 27px;
   color: #99E2D0;
   background-color: white;
-  animation: slide-in 1s ease-in-out;
 }
 .check__background {
   opacity: 1;
@@ -654,7 +629,6 @@ html {
   width: 0%;
   height: 100%;
   border-radius: 0px 15px 15px 0px;
-  animation: slide-in 1s ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */
