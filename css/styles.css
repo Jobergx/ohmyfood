@@ -180,13 +180,6 @@ html {
   max-width: 1024px;
   margin: auto;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .how {
-    position: absolute;
-    left: 20px;
-    top: 25rem;
-  }
-}
 
 #restaurants {
   margin-inline: 12px;
@@ -209,11 +202,9 @@ html {
   padding: 20px;
   background: white;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .how-it {
-    padding: 2rem 13rem;
-    background: white;
-    margin: 0px;
+    padding: 1rem;
   }
 }
 
@@ -318,12 +309,6 @@ html {
     row-gap: 50px;
     column-gap: 100px;
     padding-bottom: 50px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .restaurant-main {
-    margin-inline: 20px;
-    padding-inline: 20px;
   }
 }
 

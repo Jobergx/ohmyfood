@@ -230,11 +230,7 @@ html {
     max-width: 1024px;
     margin: auto;
 
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        position: absolute;
-        left: 20px;
-        top: 25rem;
-    }
+    
 }
 
 #restaurants {
@@ -265,10 +261,10 @@ html {
     padding: 20px;
     background: white;
 
-    @media only screen and (min-width: 768px) {
-        padding: 2rem 13rem;
-        background: white;
-        margin: 0px;
+   
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        padding: 1rem;
     }
 }
 
@@ -376,10 +372,7 @@ html {
         padding-bottom: 50px;
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        margin-inline: 20px;
-        padding-inline: 20px;
-    }
+   
 }
 
 .card {
