@@ -154,7 +154,7 @@ html {
         }
     }
 
-    &__explore-button {
+    &__explore-button  {
         background-image: linear-gradient($Secondary-color, $primary-color);
         width: 218px;
         height: 50px;
@@ -188,6 +188,13 @@ html {
 
 
 
+    }
+    &__button{
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+        position: relative;
+        top: 1rem;
     }
 }
 
@@ -589,17 +596,24 @@ html {
 
 .item1,
 .item2 {
-    flex-grow: 1;
+   max-width: 260px;
+   flex-shrink: 1;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
+   ;
+    p, h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
 }
 
 .item3 {
     align-items: flex-end;
     flex-grow: 1;
     padding-right: 12px;
-    width: 10%;
+    width: 70px;
     overflow: hidden;
     transition: left 1s 0.7s ease-in-out;
     direction: rtl;
@@ -711,13 +725,7 @@ html {
         p {
             font-weight: 300;
             margin: 0px;
-            padding: 0px;
-
-            flex: 1;
-
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            padding: 0px;  
         }
 
 

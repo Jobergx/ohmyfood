@@ -134,6 +134,13 @@ html {
   width: 100%;
   margin: auto;
 }
+.main__button {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  top: 1rem;
+}
 
 @keyframes heart-backwards {
   0% {
@@ -496,16 +503,25 @@ html {
 }
 .item1,
 .item2 {
-  flex-grow: 1;
+  max-width: 260px;
+  flex-shrink: 1;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+.item1 p, .item1 h3,
+.item2 p,
+.item2 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item3 {
   align-items: flex-end;
   flex-grow: 1;
   padding-right: 12px;
-  width: 10%;
+  width: 70px;
   overflow: hidden;
   transition: left 1s 0.7s ease-in-out;
   direction: rtl;
@@ -593,10 +609,6 @@ html {
   font-weight: 300;
   margin: 0px;
   padding: 0px;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .check {
