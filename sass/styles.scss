@@ -27,7 +27,6 @@ html {
 }
 
 
-
 .header {
     display: flex;
     width: 100%;
@@ -230,7 +229,7 @@ html {
     max-width: 1024px;
     margin: auto;
 
-    
+
 }
 
 #restaurants {
@@ -243,6 +242,7 @@ html {
         margin: auto;
         max-width: 1024px;
         justify-content: flex-start;
+        padding: 1rem;
 
         .restaurant__container {
             display: flex;
@@ -261,7 +261,7 @@ html {
     padding: 20px;
     background: white;
 
-   
+
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
         padding: 1rem;
@@ -372,7 +372,7 @@ html {
         padding-bottom: 50px;
     }
 
-   
+
 }
 
 .card {
@@ -542,6 +542,7 @@ html {
     z-index: 999;
     animation: loader-fade-out 3s ease-in-out both;
     pointer-events: none;
+    background-color: $Tertiary-color;
 }
 
 .loader {
@@ -560,14 +561,11 @@ html {
         top: 35%;
         left: 45%;
     }
-    &-image {
-        flex: 1;
-        align-self: center;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
+
+
 }
+
+
 
 @keyframes spin {
     0% {
@@ -583,17 +581,18 @@ html {
     0% {
         opacity: 1;
     }
-   
+
     100% {
         opacity: 0;
     }
 }
+
 .item1,
 .item2 {
     flex-grow: 1;
     margin: 0;
     padding: 0;
-    
+
 }
 
 .item3 {
@@ -606,7 +605,8 @@ html {
     direction: rtl;
     margin-top: 50px;
 }
-.item4  {
+
+.item4 {
     flex-grow: 0;
     width: 0%;
     overflow: hidden;
@@ -617,10 +617,12 @@ html {
     from {
         transform: translate(-50%);
     }
+
     to {
         transform: translate(0);
     }
 }
+
 .menu {
 
     display: flex;
@@ -635,6 +637,8 @@ html {
     >h3 {
         font-weight: 400;
         padding-left: 12px;
+        
+
 
         &::after {
             content: "";
@@ -658,6 +662,8 @@ html {
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         height: 69px;
+       
+        
 
         &__text {
             padding-top: 0px;
@@ -667,16 +673,16 @@ html {
         }
 
         &:hover .item4 {
-            
+
             width: 70px;
         }
 
         &:hover .check {
             display: flex;
-            
+
         }
 
-        
+
 
         @keyframes slide-in {
             from {
@@ -707,10 +713,15 @@ html {
             margin: 0px;
             padding: 0px;
 
+            flex: 1;
+
+            white-space: nowrap;
+            overflow: hidden;
             text-overflow: ellipsis;
         }
 
-       
+
+
 
 
 
@@ -747,7 +758,7 @@ html {
     max-height: 27px;
     color: $Tertiary-color;
     background-color: white;
-    
+
 
 
     &__background {
@@ -760,7 +771,7 @@ html {
         width: 0%;
         height: 100%;
         border-radius: 0px 15px 15px 0px;
-        
+
 
 
     }
@@ -769,29 +780,31 @@ html {
 }
 
 .food {
-    opacity: 0; 
-  visibility: hidden; 
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 .starters {
-    animation: showNext 0.5s ease-in-out 1s forwards; 
+    animation: showNext 0.5s ease-in-out 1s forwards;
 }
 
 .mains {
-    animation: showNext 0.5s ease-in-out 2s forwards; 
+    animation: showNext 0.5s ease-in-out 2s forwards;
 }
 
 .desserts {
-    animation: showNext 0.5s ease-in-out 3s forwards; 
+    animation: showNext 0.5s ease-in-out 3s forwards;
 }
+
 @keyframes showNext {
     0% {
-      opacity: 0;
-      visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
     }
+
     100% {
-      opacity: 1;
-      visibility: visible;
+        opacity: 1;
+        visibility: visible;
     }
-  }
+}
