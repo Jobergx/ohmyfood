@@ -358,6 +358,11 @@ html {
     min-width: 360px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .card {
+    max-width: 440px;
+  }
+}
 
 .footer,
 .footer__item {
