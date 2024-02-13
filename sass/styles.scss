@@ -184,8 +184,10 @@ html {
         top: -50px;
         max-width: 1024px;
         width: 100%;
-        margin: auto;
-
+       
+        @media only screen and (min-width: 768px) {
+            margin: auto;
+        }
 
 
     }
@@ -593,7 +595,13 @@ html {
         opacity: 0;
     }
 }
-
+.ellipsis {
+    flex: 1;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .item1,
 .item2 {
    max-width: 260px;
@@ -601,7 +609,7 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-   ;
+    text-overflow: ellipsis;
     p, h3 {
         white-space: nowrap;
         overflow: hidden;
@@ -611,7 +619,7 @@ html {
 
 .item3 {
     align-items: flex-end;
-    flex-grow: 1;
+    flex-grow: 0;
     padding-right: 12px;
     width: 70px;
     overflow: hidden;
